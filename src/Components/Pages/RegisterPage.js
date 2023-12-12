@@ -72,7 +72,7 @@ function setupRegisterForm() {
 
     try {
       // Send a POST request to your API endpoint
-      const response = await fetch('http://localhost:3000/auths/register', {
+      const response = await fetch(`${process.env.API_BASE_URL}/auths/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

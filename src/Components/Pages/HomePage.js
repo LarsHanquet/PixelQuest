@@ -90,7 +90,7 @@ function getAllTableLinesAsString(scores) {
 const HomePage = () => {
     clearPage();
 
-    fetch('http://localhost:3000/scores')
+    fetch(`${process.env.API_BASE_URL}/scores`)
         .then((response) => {
             if (!response.ok) throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
             return response.json();
